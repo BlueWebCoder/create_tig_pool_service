@@ -12,9 +12,10 @@ service_file="/etc/systemd/system/tig_pool.service"
 
 echo "Création du fichier de service à $service_file ..."
 
+# Utiliser sudo pour créer le fichier de service avec les informations fournies par l'utilisateur
 sudo bash -c "cat > $service_file" <<EOL
 [Unit]
-Description=Service pour exécuter \$launch_file
+Description=Service pour exécuter $launch_file
 After=network.target
 
 [Service]
@@ -30,14 +31,14 @@ EOL
 
 echo "Fichier de service créé avec succès."
 
-# Recharger systemd
+# Recharger systemd pour prendre en compte le nouveau service
 echo "Rechargement de systemd..."
 sudo systemctl daemon-reload
 
-# Redémarrer le service
+# Redémarrer le service tig_pool.service
 echo "Redémarrage du service tig_pool.service..."
 sudo systemctl restart tig_pool.service
 
-# Suivre les logs en temps réel
+# Suivre les journaux en temps réel du service
 echo "Affichage des journaux du service en temps réel..."
 sudo journalctl -u tig_pool.service -f
