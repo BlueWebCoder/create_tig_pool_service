@@ -5,7 +5,7 @@ read -p "Entrez le nom de l'utilisateur : " user_name
 read -p "Entrez le nom du groupe : " group_name
 
 # Demander à l'utilisateur le nom du fichier de lancement
-read -p "Entrez le chemin absolu du fichier de lancement (ex: pool_tig_launch_774_7950x.sh) : " launch_file
+read -p "Entrez le nom du fichier de lancement (ex: pool_tig_launch_774_7950x.sh) : " launch_file
 
 # Créer le fichier de service
 service_file="/etc/systemd/system/tig_pool.service"
