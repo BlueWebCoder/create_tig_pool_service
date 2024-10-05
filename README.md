@@ -1,6 +1,4 @@
-# create_tig_pool_service
-
-Exemple d'utilisation :
+# Exemple d'utilisation :
 -----------------------
 Entrez le nom de l'utilisateur : `user123`  
 Entrez le nom du groupe : `group123`  
