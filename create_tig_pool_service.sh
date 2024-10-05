@@ -35,6 +35,10 @@ echo "Rechargement de systemd..."
 sudo systemctl daemon-reload
 
 # Redémarrer le service
+echo "Activation du service tig_pool.service au démarrage..."
+sudo systemctl enable tig_pool.service
+
+# Redémarrer le service
 echo "Redémarrage du service tig_pool.service..."
 sudo systemctl restart tig_pool.service
 
