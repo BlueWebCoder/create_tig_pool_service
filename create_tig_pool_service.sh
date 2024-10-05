@@ -18,8 +18,8 @@ Description=Service pour exécuter $launch_file
 After=network.target
 
 [Service]
-ExecStart=$launch_file
-WorkingDirectory=/home/$user_name/tig_pool_xnico_v4/$(basename $launch_file)
+ExecStart=/home/$user_name/tig_pool_xnico_v4/$(basename $launch_file)
+WorkingDirectory=/home/$user_name/tig_pool_xnico_v4/
 Restart=always
 User=$user_name
 Group=$group_name
